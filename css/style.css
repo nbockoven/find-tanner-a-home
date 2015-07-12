@@ -1,0 +1,63 @@
+body {
+  background: -webkit-radial-gradient( white, #eee );
+  background: -moz-radial-gradient( white, #eee );
+  background: -o-radial-gradient( white, #eee );
+  background: radial-gradient( white, #eee );
+  font-size: 13.5px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.1;
+  color: inherit;
+}
+
+body, .form-control {
+  line-height: 1.4;
+}
+
+h1, h2{
+  text-shadow: 2px 2px white;
+}
+
+h1 {
+  font-size: 4.5vw;
+}
+
+h2, header .fa {
+  font-size: 3.0vw;
+  text-decoration: none;
+}
+
+header .fa {
+  margin-top: 20px;
+}
+
+header {
+  background-color: white;
+  border-bottom: 3px solid #eee;
+}
+
+label {
+  font-weight: bold;
+}
+
+h1, h2, textarea {
+  font-weight: 300;
+}
+
+
+
+
+/*smaller screens*/
+@media screen and (max-width: 500px){
+  h1, h2 {
+    font-weight: 600;
+    font-size: 4vw;
+  }
+  header .fa {
+    margin-top: 10px;
+    font-size: 4.5vw;
+  }
+}
