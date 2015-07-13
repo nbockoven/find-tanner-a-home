@@ -1,4 +1,5 @@
 body {
+  background-color: #eee;
   background: -webkit-radial-gradient( white, #eee );
   background: -moz-radial-gradient( white, #eee );
   background: -o-radial-gradient( white, #eee );
