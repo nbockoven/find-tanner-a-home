@@ -55,6 +55,8 @@
 
           <?php include './sections/temperament.html';?>
 
+          <?php include './sections/our-search.html';?>
+
           <?php include './sections/contact.html';?>
 
         </div><!-- .col-lg-10 -->
