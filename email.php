@@ -53,6 +53,4 @@
     echo json_encode( array('status' => 'warning', 'msg' => 'Data not as expected.') );
   }
 
-  die();
-
 ?>
