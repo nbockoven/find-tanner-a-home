@@ -1,4 +1,8 @@
-<?php include './email.php'; ?>
+<?php
+
+include './email.php';
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
