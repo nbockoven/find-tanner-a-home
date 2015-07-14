@@ -47,8 +47,5 @@
     else
       die( json_encode( ['status' => 'danger', 'msg' => 'Encountered an error while sending.'] ) );
   }
-  else{
-    die( json_encode( ['status' => 'warning', 'msg' => 'Data not as expected.'] ) );
-  }
 
 ?>
