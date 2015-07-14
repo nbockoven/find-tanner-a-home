@@ -1,10 +1,6 @@
 <?php
 
-  echo 'this is a test';
-
-  // die( json_encode( ["testing"] ) );
-
-  /*function validate( $array ){
+  function validate( $array ){
     $isGood = false;
     foreach( $_POST as $key => $value ){
       $value  = trim( strip_tags( $value ) );
@@ -47,9 +43,12 @@
 
 
     if( mail( $to, $subject, $body, $headers ) )
-      die( json_encode( ['status' => 'success', 'msg' => 'Message sent.'] ) );
+      echo json_encode( ['status' => 'success', 'msg' => 'Message sent.'] );
     else
-      die( json_encode( ['status' => 'danger', 'msg' => 'Encountered an error while sending.'] ) );
-  }*/
+      echo json_encode( ['status' => 'danger', 'msg' => 'Encountered an error while sending.'] );
+  }
+  else{
+    echo json_encode( ['status' => 'warning', 'msg' => 'Data not as expected.'] );
+  }
 
 ?>
