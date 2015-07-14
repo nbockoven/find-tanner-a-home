@@ -45,12 +45,12 @@
 
 
     if( mail( $to, $subject, $body, $headers ) )
-      echo json_encode( ['status' => 'success', 'msg' => 'Message sent.'] );
+      echo json_encode( array('status' => 'success', 'msg' => 'Message sent.') );
     else
-      echo json_encode( ['status' => 'danger', 'msg' => 'Encountered an error while sending.'] );
+      echo json_encode( array('status' => 'danger', 'msg' => 'Encountered an error while sending.') );
   }
   else{
-    echo json_encode( ['status' => 'warning', 'msg' => 'Data not as expected.'] );
+    echo json_encode( array('status' => 'warning', 'msg' => 'Data not as expected.') );
   }
 
   die();
