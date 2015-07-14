@@ -5,7 +5,7 @@
     !empty($_POST['generated']) == $_POST['confirmation'] &&
     strlen( trim( $_POST['generated'] ) )
   ){
-    $msg = shell_exec( "cd ~/public_html/find-tanner-a-home.com; git checkout master; git fetch --all; git reset --hard origin/master; find . -type d -exec chmod 755 {} \; find . -type f -exec chmod 644 {} \; chmod 755 update.php" );
+    $msg = shell_exec( "cd ~/public_html/find-tanner-a-home.com; git checkout master; git fetch --all; git reset --hard origin/master; find . -type d -exec chmod 755 {} \; find . -type f -exec chmod 644 {} \; chmod 755 update.php;" );
   }
   else{
     $rand = rand(1000, 9999);
