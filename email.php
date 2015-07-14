@@ -1,6 +1,8 @@
 <?php
 
-  function validate( $array ){
+  die( json_encode( ["testing"] ) );
+
+  /*function validate( $array ){
     $isGood = false;
     foreach( $_POST as $key => $value ){
       $value  = trim( strip_tags( $value ) );
@@ -46,6 +48,6 @@
       die( json_encode( ['status' => 'success', 'msg' => 'Message sent.'] ) );
     else
       die( json_encode( ['status' => 'danger', 'msg' => 'Encountered an error while sending.'] ) );
-  }
+  }*/
 
 ?>
