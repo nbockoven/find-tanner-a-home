@@ -44,11 +44,8 @@ $('a[name=send]').click(function(){
                      </button>Encountered an error while sending.</div>";
       modalBody.find('.alert').remove();
       modalBody.prepend( alert );
-      console.log( 'ERROR' );
-      console.log( e );
     },
     success: function( response ){
-      console.log( response );
       // display status message
       var modalBody = link.parents('.modal').eq(0).find('.modal-body').eq(0);
       var alert = "<div class='alert alert-"+response.status+"'>\
