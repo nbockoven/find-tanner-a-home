@@ -36,12 +36,12 @@
     $to = "nathaniel@find-tanner-a-home.com";
     $subject = "Interest in Tanner";
 
-    $body = $name." writes, \r\n".$message."\r\n"."email: ".$email."\r\n"."phone: ".$phone;
+    $body = "<strong>".$name."</strong> writes,<hr>\r\n<i>".$message."\r\n"."</i><hr>email: ".$email."\r\n"."phone: ".$phone;
     // html email
-    // $headers = "MIME-Version: 1.0" . "\r\n";
-    // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     // From
-    $headers = "From: ".$email."\r\n";
+    $headers .= "From: ".$email."\r\n";
 
 
     if( mail( $to, $subject, $body, $headers ) )
