@@ -2,6 +2,24 @@ $('#modal-message').on('shown.bs.modal', function( e ){
   $(e.currentTarget).find('input:first').focus();
 });
 
+$('#modal-message').on('hidden.bs.modal', function( e ){
+  resetModal( $(e.currentTarget) );
+});
+
+function resetModal( modal ){
+  // remove any alerts
+  modal.find('.alert, .fa-spinner').remove();
+  // show send button with proper text, and hide close button
+  modal.find('a[name=send]').eq(0)
+       .html('<i class="fa fa-paper-plane-o fa-fw"></i> Send')
+       .removeClass('btn-info hide')
+       .addClass('btn-success')
+       .prev()
+       .addClass('hide');
+  // clear fields
+  modal.find('input, textarea').val('');
+}
+
 $('a[name=send]').click(function(){
   var link = $(this);
   $.ajax({
@@ -15,16 +33,17 @@ $('a[name=send]').click(function(){
           .html("<i class='fa fa-spinner fa-spin'></i>");
     },
     complete: function(){
-      link.addClass('btn-default')
-          .removeClass('btn-info')
-          .html("Close");
-    },
-    error: function( e ){
-      console.log( e );
+      link.addClass('hide').prev().removeClass('hide');
     },
     success: function( response ){
       // display status message
-      console.log( response );
+      var modalBody = link.parents('.modal').eq(0).find('.modal-body').eq(0);
+      var alert = "<div class='alert alert-"+response.status+"'>\
+                     <button type='button' class='close' data-dismiss='alert' aria-label='Close'>\
+                       <span aria-hidden='true'>&times;</span>\
+                     </button>"+response.msg+"</div>";
+      modalBody.find('.alert').remove();
+      modalBody.prepend( alert );
     }
   });
 });

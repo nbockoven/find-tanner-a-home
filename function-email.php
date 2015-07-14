@@ -1,31 +1,54 @@
 <?php
 
   function validate( $array ){
+    $isGood = false;
     foreach( $_POST as $key => $value ){
-      $value  = trim( $value );
+      $value  = trim( strip_tags( $value ) );
       $_POST[$key] = $value;
       $isGood = false;
       switch( $key ){
         case 'email':
           $isGood = validateEmail( $value );
           break;
-        case 'phone':
-          $isGood = validatePhone( $value );
-          break;
         default:
           $isGood = strlen( $value ) > 2;
       }
+      if( !$isGood )
+        return false;
     }
+    return $isGood;
+  }
+
+  function validateEmail( $email ){
+    if( !filter_var( $email, FILTER_VALIDATE_EMAIL ) )
+      return false;
+    return true;
   }
 
   if( $_POST['name'] && $_POST['email'] && $_POST['phone'] && $_POST['message'] && validate( $_POST ) ){
-    if( mail( $to, $subject, $message, $headers ) )
-      die( json_encode( "I love you, Tanner." ) );
+    $name    = $_POST['name'];
+    $email   = $_POST['email'];
+    $phone   = $_POST['phone'];
+    $message = $_POST['message'];
+
+    $to = "nathaniel@find-tanner-a-home.com";
+    $subject = "Interest in Tanner";
+
+    $body = $name." writes, \r\n".$message."\r\n"."email: ".$email."\r\n phone: ".$phone;
+    // html email
+    // $headers = "MIME-Version: 1.0" . "\r\n";
+    // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    // From
+    $headers = "From: ".$email."\r\n";
+
+
+    if( mail( $to, $subject, $body, $headers ) )
+      die( json_encode( ['status' => 'success', 'msg' => 'Message sent.'] ) );
     else
-      die( json_encode( "Did not send." ) );
+      die( json_encode( ['status' => 'danger', 'msg' => 'Encountered an error while sending.'] ) );
   }
   else{
-    die( json_encode( "Nope." ) );
+    die( json_encode( ['status' => 'warning', 'msg' => 'Data not as expected.'] ) );
   }
 
 ?>
