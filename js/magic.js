@@ -24,7 +24,7 @@ $('a[name=send]').click(function(){
   var link = $(this);
   $.ajax({
     type: 'POST',
-    url: '/email.php',
+    url: '/',
     data: $('#form-message').serialize(),
     dataType: 'json',
     beforeSend: function(){
