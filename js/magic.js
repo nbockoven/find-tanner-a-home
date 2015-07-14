@@ -26,6 +26,7 @@ $('a[name=send]').click(function(){
     type: 'POST',
     url: '/email.php',
     data: $('#form-message').serialize(),
+    dataType: 'json',
     beforeSend: function(){
       link.addClass('btn-info')
           .removeClass('btn-success')
