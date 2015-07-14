@@ -35,6 +35,16 @@ $('a[name=send]').click(function(){
     complete: function(){
       link.addClass('hide').prev().removeClass('hide');
     },
+    error: function( e ){
+      // display status message
+      var modalBody = link.parents('.modal').eq(0).find('.modal-body').eq(0);
+      var alert = "<div class='alert alert-danger'>\
+                     <button type='button' class='close' data-dismiss='alert' aria-label='Close'>\
+                       <span aria-hidden='true'>&times;</span>\
+                     </button>Encountered an error while sending.</div>";
+      modalBody.find('.alert').remove();
+      modalBody.prepend( alert );
+    },
     success: function( response ){
       // display status message
       var modalBody = link.parents('.modal').eq(0).find('.modal-body').eq(0);
