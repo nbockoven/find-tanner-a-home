@@ -1,6 +1,8 @@
 <?php
 
-  die( json_encode( ["testing"] ) );
+  echo 'this is a test';
+
+  // die( json_encode( ["testing"] ) );
 
   /*function validate( $array ){
     $isGood = false;
