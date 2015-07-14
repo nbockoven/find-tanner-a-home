@@ -1,5 +1,7 @@
 <?php
 
+  header('Content-Type: application/json');
+
   function validate( $array ){
     $isGood = false;
     foreach( $_POST as $key => $value ){
