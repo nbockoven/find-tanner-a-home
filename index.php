@@ -60,7 +60,7 @@
               <?php include './sections/our-search.html';?>
               <?php include './sections/contact.html';?>
             </div><!-- .col-sm-6 -->
-            <div class="col-sm-6">
+            <div class="col-sm-6" style="margin-top:23px">
               <img src="img/Tanner64.JPG" alt="Tanner" class="img-thumbnail img-responsive">
             </div><!-- .col-sm-6 -->
           </div><!-- .row -->
