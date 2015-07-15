@@ -1,9 +1,9 @@
 body {
-  background-color: #eee;
-  background: -webkit-radial-gradient( white, #eee );
-  background: -moz-radial-gradient( white, #eee );
-  background: -o-radial-gradient( white, #eee );
-  background: radial-gradient( white, #eee );
+  background-color: #f2edee;
+  background: -webkit-radial-gradient( white, #f2edee );
+  background: -moz-radial-gradient( white, #f2edee );
+  background: -o-radial-gradient( white, #f2edee );
+  background: radial-gradient( white, #f2edee );
   font-size: 13.5px;
 }
 
@@ -37,7 +37,7 @@ header .fa {
 
 header {
   background-color: white;
-  border-bottom: 3px solid #eee;
+  border-bottom: 3px solid #f2edee;
 }
 
 label {

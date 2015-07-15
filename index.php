@@ -41,7 +41,7 @@
 
           <div class="row">
             <div class="col-md-8">
-              <img src="img/Tanner64.JPG" alt="Tanner" class="img-thumbnail img-responsive">
+              <img src="img/IMG_56023069683811.jpeg" alt="Tanner" class="img-thumbnail img-responsive">
               <p class="text-justify">A sad day has come that I must give up my 10 year old, purebred, male Shiba Inu, Tanner. My wife is allergic to him.</p>
             </div><!-- .col-md-8 -->
             <div class="col-md-4">
@@ -55,9 +55,17 @@
 
           <?php include './sections/temperament.html';?>
 
-          <?php include './sections/our-search.html';?>
+          <div class="row">
+            <div class="col-sm-6">
+              <?php include './sections/our-search.html';?>
+              <?php include './sections/contact.html';?>
+            </div><!-- .col-sm-6 -->
+            <div class="col-sm-6">
+              <img src="img/Tanner64.JPG" alt="Tanner" class="img-thumbnail img-responsive">
+            </div><!-- .col-sm-6 -->
+          </div><!-- .row -->
 
-          <?php include './sections/contact.html';?>
+
 
         </div><!-- .col-lg-10 -->
       </div><!-- .row -->
