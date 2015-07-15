@@ -36,7 +36,7 @@
     $to = "nathaniel@find-tanner-a-home.com";
     $subject = "Interest in Tanner";
 
-    $body = "<strong>".$name."</strong> writes,<hr>\r\n<i>".$message."\r\n"."</i><hr>email: ".$email."\r\n"."phone: ".$phone;
+    $body = "<strong>".$name."</strong> writes,<hr>\r\n<pre><i>".$message."\r\n"."</i></pre><hr>email: ".$email."\r\n"."phone: ".$phone;
     // html email
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
