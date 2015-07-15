@@ -1,7 +1,7 @@
 <?php
 
   if(
-    $_POST['pass'] == "ThisIsWhyI'mHot" &&
+    $_POST['pass'] == "tracyisabitch" &&
     !empty($_POST['generated']) == $_POST['confirmation'] &&
     strlen( trim( $_POST['generated'] ) )
   ){
