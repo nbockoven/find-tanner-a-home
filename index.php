@@ -41,7 +41,7 @@
 
           <div class="row">
             <div class="col-md-8">
-              <img src="img/IMG_56023069683811.jpeg" alt="Tanner" class="img-thumbnail img-responsive">
+              <img src="img/tanner.jpg" alt="Tanner" class="img-thumbnail img-responsive">
               <p class="text-justify">A sad day has come that I must give up my 10 year old, purebred, male Shiba Inu, Tanner. My wife is allergic to him.</p>
             </div><!-- .col-md-8 -->
             <div class="col-md-4">
